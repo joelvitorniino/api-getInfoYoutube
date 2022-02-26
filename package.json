@@ -11,7 +11,8 @@
     "ytdl-core": "^4.10.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12"
+    "@types/cors": "^2.8.12",
+    "@types/node": "^17.0.21"
   },
   "scripts": {
     "dev": "ts-node-dev src/app.ts",
