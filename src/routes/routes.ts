@@ -4,7 +4,7 @@ import GetInfoVideoController from "../controllers/GetInfoVideoController";
 
 const routes = Router();
 
-routes.get('/video', new GetInfoVideoController().getInfoVideo);
-routes.get('/music', new GetInfoMusicController().getInfoMusic);
+routes.get('api/v1/video', new GetInfoVideoController().getInfoVideo);
+routes.get('api/v1/music', new GetInfoMusicController().getInfoMusic);
 
 export default routes;
