@@ -19,8 +19,4 @@ Paramêtros:
 
 Exemplo:
 
-<<<<<<< HEAD
 `api-get-info-youtube.herokuapp.com/api/v1/music?link=https://www.youtube.com/watch?v=T9yGcKlYAiw`
-=======
-`api-get-info-youtube.herokuapp.com/api/v1/music?link=https://www.youtube.com/watch?v=T9yGcKlYAiw`
->>>>>>> 0c5937e0c8821a7daec1733d5b7b8673ece88582
