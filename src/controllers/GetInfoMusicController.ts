@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import ytdl from 'ytdl-core';
-import axios from 'axios';
 class GetInfoMusicController {
     async getInfoMusic(request: Request, response: Response) {
         const { link } = request.query; 
