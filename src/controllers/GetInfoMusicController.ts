@@ -7,11 +7,17 @@ class GetInfoMusicController {
         const getIDMusic = youtube_parser(link as string);
         const link_parsed_url = `https://youtube.com/watch?v=${getIDMusic}`;
 
-        const info = await ytdl.getInfo(link_parsed_url);
-        const audioFormats = ytdl.filterFormats(info.formats, 'audioonly');
-        const urlMusic = audioFormats[0].url;
+        const regex = /^(https?\:\/\/)?(www\.youtube\.com|youtu\.be)\/.+$/;
 
-        response.json({ linkMusic: urlMusic });
+        if(!regex.test(link as string)) {
+            response.status(404).json({ error: "Invalid URL" });
+        } else {
+            const info = await ytdl.getInfo(link_parsed_url);
+            const audioFormats = ytdl.filterFormats(info.formats, 'audioonly');
+            const urlMusic = audioFormats[0].url;
+    
+            response.status(200).json({ linkMusic: urlMusic });
+        };
     };
 };
 
